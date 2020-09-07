@@ -21,6 +21,8 @@
 .btn_3>div {
   width: 32%;
  }
+
+ 
 [class^="btn"]>div>input{
      background-color: rgb(255, 255, 255); 
     padding: 5px 0;
