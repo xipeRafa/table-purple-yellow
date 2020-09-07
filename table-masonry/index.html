@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Edit Remove HTML Table Row</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+        id = document.getElementById.bind(document)
+        q = document.querySelector.bind(document)
+        all = document.querySelectorAll.bind(document)
+        ce = document.createElement.bind(document)
+        c = console.log.bind(document) 
+        ael= document.addEventListener.bind(document)
+        </script>
+    
+            <link href="css/row.css" rel="stylesheet" />
+            <link href="css/custom.css" rel="stylesheet" />
+            <link href="css/inputs.css" rel="stylesheet" />
+            <link rel="stylesheet" href="css/columns.css" />
+            <link rel="stylesheet" href="css/forms.css" />
+            <link rel="stylesheet" href="css/table.css">
+    </head>
+    <body>
+
+        <form>
+     <input id="searchTerm" type="text" onkeyup="doSearch()" 
+     placeholder="BUSCAR"/>
+        </form>
+
+        <div class="row"><p>CRUD_TABLE</p></div>
+
+        <div class="row_6 ">
+            <input type="text" name="fname" id="fname" placeholder="First name">
+           
+            <input type="text" name="lname" id="lname"
+            placeholder="Last name">
+            
+           <input type="number" name="age" id="age"
+           placeholder="Age">
+            
+            <button onclick="add();">Add</button>
+            <button onclick="edit();">Edit</button>
+            <button onclick="remove();">Remove</button>
+        </div>
+        <hr>
+
+                <table class="table" id="datos">
+                    <tbody>
+                       <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Age</th>
+                       </tr>
+                    </tbody>   
+                </table>
+         </body>
+    <script src="index.js"></script>
+
+    <script>
+
+function checkEmptyInput()
+{
+    let isEmpty = false
+        fname = id("fname").value
+        lname = id("lname").value
+        age = id("age").value
+
+    if(fname === ""){
+        alert("First Name Connot Be Empty");
+        isEmpty = true;
+    }
+    else if(lname === ""){
+        alert("Last Name Connot Be Empty");
+        isEmpty = true;
+    }
+    else if(age === ""){
+        alert("Age Connot Be Empty");
+        isEmpty = true;
+    }
+    return isEmpty;
+} 
+
+function doSearch() {
+            var tableReg = document.getElementById('datos');
+            var searchText = document.getElementById('searchTerm').value.toLowerCase();
+            var cellsOfRow = "";
+            var found = false;
+            var compareWith = "";
+
+            // Recorremos todas las filas con contenido de la tabla
+            for (var i = 1; i < tableReg.rows.length; i++) {
+                cellsOfRow = tableReg.rows[i].getElementsByTagName('td');
+                found = false;
+                // Recorremos todas las celdas
+                for (var j = 0; j < cellsOfRow.length && !found; j++) {
+                    compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+                    // Buscamos el texto en el contenido de la celda
+                    if (searchText.length == 0 || (compareWith.indexOf(searchText) > -1)) {
+                        found = true;
+                    }
+                }
+                if (found) {
+                    tableReg.rows[i].style.display = '';
+                } else {
+                    // si no ha encontrado ninguna coincidencia, esconde la
+                    // fila de la tabla
+                    tableReg.rows[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</html>
