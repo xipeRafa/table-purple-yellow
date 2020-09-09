@@ -69,3 +69,68 @@
     .column{
         flex-direction: column;
      }
+
+
+
+
+
+     /* -------------------- */
+
+
+
+
+.one_two{
+      width: 90%;
+      margin: 1% 5%;
+      overflow: hidden;
+      box-shadow: white inset  2px 2px,white inset -2px -2px;
+}
+.one_two>div{
+width: 50%;
+box-shadow: white inset  2px 2px,white inset -2px -2px;
+text-align: center;
+box-sizing: border-box;
+float: left;
+padding: 20px 0;
+}
+.one_two>div:nth-child(1){
+      background-color: powderblue;
+}
+.one_two>div:nth-child(2){
+      background-color: rgb(176, 230, 207);
+}
+.one_two>div:nth-child(3){
+      background-color: rgb(184, 176, 230);
+      float: right;
+}
+
+
+
+
+
+
+.two_one{
+      width: 90%;
+      margin: 1% 5%;
+      overflow: hidden;
+      box-shadow: white inset  2px 2px,white inset -2px -2px;
+}
+.two_one>div{
+width: 50%;
+box-shadow: white inset  2px 2px,white inset -2px -2px;
+text-align: center;
+box-sizing: border-box;
+float: right;
+padding: 20px 0;
+}
+.two_one>div:nth-child(1){
+        background-color: powderblue;
+}
+.two_one>div:nth-child(2){
+         background-color: rgb(176, 230, 207);
+}
+.two_one>div:nth-child(3){
+      background-color: rgb(184, 176, 230);
+      float: left;
+  }
+

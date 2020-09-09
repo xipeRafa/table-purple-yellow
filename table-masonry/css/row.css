@@ -4,6 +4,7 @@
   overflow: hidden;
   padding: .5% 0;
   
+  
 }
 [class^="row"]>div{
   box-sizing: border-box;
@@ -16,8 +17,12 @@
   padding: .5% 0;
   width: 100%;
   box-shadow: white inset  1px 1px,white inset -1px -1px;
+  background: #7f9dc4;
 }
-
+.b-shadow_red{
+  box-shadow: rgba(255, 0, 0, 0.589) inset  3px 3px,rgba(255, 0, 0, 0.596) inset -3px -3px;
+  }
+  
 @media (min-width: 360px) {
   .row_12>div {width: 32%}
   .row_12>div:nth-child(3n),
@@ -158,3 +163,13 @@
   .row-5_4>div:nth-child(7),
   .row-5_4>div:nth-child(9) {margin-left:4%;}
 } 
+
+
+
+.div_100>div{
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 40.4px 0; 
+  box-shadow: white inset  2px 2px,white inset -2px -2px;
+}
