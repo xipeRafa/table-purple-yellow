@@ -104,6 +104,7 @@ html {
   input[type="submit"],
   input[type="reset"],
   input[type="button"] {
+    width: 100%;
     display: inline-block;
     height: 38px;
     padding: 0 30px;
@@ -280,10 +281,7 @@ html {
   
   /* Spacing
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  button,
-  .button {
-    margin-bottom: 1rem;
-  }
+ 
   input,
   textarea,
   select,
